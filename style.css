@@ -2,8 +2,8 @@
     width: 20%;
     height: 20%;
 }
-li{
-   float: left;
+ul{
+    display: flex;
 }
 .Banner{
     width: 100%;
