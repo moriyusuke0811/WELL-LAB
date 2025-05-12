@@ -5,4 +5,7 @@
 li{
    float: left;
 }
-.banner
+.banner{
+    width: 100%;
+    height: 100%;
+}
