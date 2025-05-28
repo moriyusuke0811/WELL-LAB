@@ -41,25 +41,35 @@ body {
   color: #fff;
 }
 
+.slider {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.slides-container {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 300vw;
+}
+
 .slide {
-  width: 100vw; /* スライド1枚＝画面幅 */
+  width: 100vw;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.slides-container {
-  display: flex;
-  transition: transform 1s ease-in-out;
-  width: 300vw; /* 固定：スライド3枚分 */
-}
-
 .slide img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  aspect-ratio: 16 / 9;
   display: block;
+  margin: auto;
 }
 
 /* 操作ボタン */
