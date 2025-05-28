@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<html lang="ja">
 <head>
-    <script scr="script.js"></script>
-    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <title>WELL-LAB.|個人にあった医療福祉のシステムを創る学生集団</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header01">
@@ -12,19 +13,23 @@
         </h1>
         <nav class="header01-nav">
             <ul class="header01-list">
-            <li class="header01-item"><a href="">TOP</a></li>
-            <li class="header01-item"><a href="">ABOUT US</a></li>
-            <li class="header01-item"><a href="">PRODUCTS</a></li>
-            <li class="header01-item"><a href="">NEWS</a></li>
-            <li class="header01-item"><a href="">CONTACT</a></li>
+                <li class="header01-item"><a href="">TOP</a></li>
+                <li class="header01-item"><a href="">ABOUT US</a></li>
+                <li class="header01-item"><a href="">PRODUCTS</a></li>
+                <li class="header01-item"><a href="">NEWS</a></li>
+                <li class="header01-item"><a href="">CONTACT</a></li>
             </ul>
         </nav>
     </header>
+    
     <section class="slider">
         <div class="slides">
             <div class="slide"><img src="images/slide1.jpg" alt="紹介1" /></div>
             <div class="slide"><img src="images/slide2.jpg" alt="紹介2" /></div>
             <div class="slide"><img src="images/slide3.jpg" alt="紹介3" /></div>
+            <!-- ループのために1枚目を複製 -->
+            <div class="slide"><img src="images/slide1.jpg" alt="紹介1" /></div>
         </div>
     </section>
 </body>
+</html>

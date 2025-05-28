@@ -1,7 +1,8 @@
-.logo{
-    width: 20%;
-    height: 20%;
+.logo {
+  width: 20%;
+  height: auto;
 }
+
 .header01 {
   padding: 16px 24px;
   background-color: #fafafa;
@@ -21,13 +22,6 @@
   gap: 32px;
   font-size: 16px;
   font-weight: bold;
-}
-
-.header01-item--contact {
-  background-color: #2486d1;
-  color: #fff;
-  padding: 6px 16px;
-  border-radius: 6px;
 }
 
 .header01-item a {
@@ -57,8 +51,8 @@
 
 .slides {
   display: flex;
-  width: 300%;
-  animation: slide 12s infinite;
+  width: 400%; /* 3枚＋ループ用1枚 */
+  animation: slide 16s linear infinite;
 }
 
 .slide {
@@ -67,14 +61,16 @@
 }
 
 .slide img {
-  width: auto;
+  width: 100%;
   height: 400px;
   object-fit: cover;
 }
 
+/* スライドアニメーション */
 @keyframes slide {
   0%   { transform: translateX(0%); }
-  33%  { transform: translateX(-100%); }
-  66%  { transform: translateX(-200%); }
+  25%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
   100% { transform: translateX(0%); }
 }
