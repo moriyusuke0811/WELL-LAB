@@ -1,14 +1,16 @@
-/* 基本 */
+/* === 基本設定 === */
 body {
   margin: 0;
   font-family: sans-serif;
 }
 
+/* === ロゴ設定 === */
 .logo {
   width: 20%;
   height: auto;
 }
 
+/* === ヘッダー === */
 .header01 {
   padding: 16px 24px;
   background-color: #fafafa;
@@ -38,38 +40,56 @@ body {
   padding: 0;
 }
 
+.header01-item a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.header01-item a:hover {
+  background-color: #e0f0ff;
+}
+
+.header01-item:last-child a {
+  background-color: #2486d1;
+  color: #fff;
+}
+
+/* === スライダー === */
 .slider {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 400px;
-  overflow: hidden;
+  overflow: hidden; /* スライド外の画像を隠す */
   margin-top: 20px;
 }
 
 .slides-container {
   display: flex;
   transition: transform 1s ease-in-out;
-  width: 300vw;
+  width: 300vw; /* スライド3枚分（スライド数に応じて調整） */
 }
 
 .slide {
-  width: 100vw;
-  height: 100%;
+  width: 100vw; /* 画面幅1枚分 */
   flex-shrink: 0;
   display: flex;
   justify-content: center;
-  align-items: center; /* 縦中央揃え */
+  align-items: center;
 }
 
 .slide img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
-  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: contain; /* 画像の縦横比を保持して収める */
   display: block;
+  margin: auto; /* 中央揃え */
 }
 
-/* ボタン */
+/* === スライダーボタン === */
 .nav {
   position: absolute;
   top: 50%;
