@@ -2,54 +2,46 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  overflow-x: hidden; /* 横スクロールを防止 */
 }
 
-/* === ロゴ設定 === */
-.logo {
-  width: 20%;
-  height: auto;
-}
-
-/* === ヘッダー === */
 /* === ヘッダー === */
 .header01 {
-  padding: 16px 16px;
+  padding: 20px 24px;
   background-color: #fafafa;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* スマホ対応で折り返し可能に */
-  max-width: 100%;
+  flex-wrap: wrap; /* 小画面で折り返し可能に */
   box-sizing: border-box;
 }
 
 .header01-logo {
-  flex-shrink: 1;
+  flex-shrink: 0;
 }
 
 .logo {
-  max-width: 250px; /* ロゴを画面に収まるよう制限 */
+  width: 200px; /* ロゴを大きく */
   height: auto;
 }
 
+/* ナビゲーション */
 .header01-nav {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
-  overflow-x: auto; /* 横に長すぎる場合スクロール可能に */
 }
 
 .header01-list {
   display: flex;
-  flex-wrap: wrap; /* 横幅が足りない場合折り返す */
-  gap: 16px;
-  font-size: 14px;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 18px; /* ナビ文字大きく */
   font-weight: bold;
-  list-style: none;
+  list-style: none; /* ●を消す */
   margin: 0;
   padding: 0;
 }
-
 
 .header01-item a {
   text-decoration: none;
