@@ -53,11 +53,11 @@ body {
 .slides-container {
   display: flex;
   transition: transform 1s ease-in-out;
-  width: 300%; /* スライド3枚分 */
+  width: calc(100% * 3); /* スライドの数だけ幅を広げる */
 }
 
 .slide {
-  width: 100vw; /* 画面全体の幅にする */
+  width: 100%; /* 100vw ではなく100% にする */
   flex-shrink: 0;
   display: flex;
   justify-content: center;
