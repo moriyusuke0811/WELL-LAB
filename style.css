@@ -29,10 +29,6 @@
   padding: 6px 16px;
   border-radius: 6px;
 }
-.Banner{
-    width: 100%;
-    height: 100%;
-}
 
 .header01-item a {
   text-decoration: none;
@@ -72,7 +68,7 @@
 
 .slide img {
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
 }
 
