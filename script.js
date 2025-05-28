@@ -9,9 +9,8 @@ const intervalTime = 4000; // 4秒ごとに切り替え
 let slideInterval = setInterval(nextSlide, intervalTime);
 
 function updateSlidePosition() {
-  slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+  slidesContainer.style.transform = `translateX(-${currentIndex * 100}vw)`;
 }
-
 function nextSlide() {
   currentIndex = (currentIndex + 1) % slideCount;
   updateSlidePosition();

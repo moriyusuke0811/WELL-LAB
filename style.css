@@ -41,19 +41,18 @@ body {
   color: #fff;
 }
 
-/* スライダー */
-.slider {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  margin-top: 20px;
+.slide {
+  width: 100vw; /* スライド1枚＝画面幅 */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slides-container {
   display: flex;
   transition: transform 1s ease-in-out;
-  width: calc(100% * 3); /* スライドの数だけ幅を広げる */
+  width: 300vw; /* 固定：スライド3枚分 */
 }
 
 .slide {
