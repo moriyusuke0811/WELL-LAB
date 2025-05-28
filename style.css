@@ -55,18 +55,11 @@ body {
   width: 300vw; /* 固定：スライド3枚分 */
 }
 
-.slide {
-  width: 100%; /* 100vw ではなく100% にする */
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .slide img {
   max-width: 100%;
   height: auto;
-  object-fit: contain; /* 中央揃え＋変形なし */
+  object-fit: contain;
+  display: block;
 }
 
 /* 操作ボタン */
