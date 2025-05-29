@@ -159,18 +159,15 @@ body {
 }
 
 .circle-link {
-  display: inline-block;
-  font-size: 13px;
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.6);
-  padding: 4px 10px;
-  border-radius: 16px;
-  text-decoration: none;
-  transition: all 0.3s;
+  text-decoration: none; /* アンダーラインを消す */
+  font-size: 13px;
+  margin-top: 8px;
+  transition: opacity 0.3s;
 }
 
 .circle-link:hover {
-  background-color: rgba(255,255,255,0.2);
+  opacity: 0.8; /* ホバー時の軽い変化だけ */
 }
 
 /* 装飾円 */
