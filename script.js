@@ -56,3 +56,31 @@ if (document.getElementById("top-news-list")) {
 if (document.getElementById("all-news-list")) {
   renderNews("all-news-list");
 }
+
+async function loadNewsFromGAS(url, listId, count = null) {
+  try {
+    const res = await fetch(url);
+    const items = await res.json();
+
+    const displayItems = count ? items.slice(0, count) : items;
+    const container = document.getElementById(listId);
+
+    displayItems.forEach(item => {
+      const li = document.createElement("li");
+      li.innerHTML = `<span class="date">${item['日付']}</span> <a href="${item['リンク']}" target="_blank">${item['タイトル']}</a>`;
+      container.appendChild(li);
+    });
+  } catch (error) {
+    console.error("ニュースの取得に失敗しました:", error);
+  }
+}
+
+// TOPページ
+if (document.getElementById("top-news-list")) {
+  loadNewsFromGAS("https://script.google.com/macros/s/AKfycb.../exec", "top-news-list", 5);
+}
+
+// NEWS.html
+if (document.getElementById("all-news-list")) {
+  loadNewsFromGAS("https://script.google.com/macros/s/AKfycb.../exec", "all-news-list");
+}
