@@ -36,27 +36,7 @@ function resetInterval() {
   slideInterval = setInterval(nextSlide, intervalTime);
 }
 
-function renderNews(listId, count = null) {
-  const container = document.getElementById(listId);
-  const displayItems = count ? newsItems.slice(0, count) : newsItems;
-
-  displayItems.forEach(item => {
-    const li = document.createElement("li");
-    li.innerHTML = `<span class="date">${item.date}</span> <a href="${item.url}">${item.title}</a>`;
-    container.appendChild(li);
-  });
-}
-
-// TOPページ用
-if (document.getElementById("top-news-list")) {
-  renderNews("top-news-list", 5);
-}
-
-// NEWS.html用
-if (document.getElementById("all-news-list")) {
-  renderNews("all-news-list");
-}
-
+// ✅ GASからニュースを取得して表示
 async function loadNewsFromGAS(url, listId, count = null) {
   try {
     const res = await fetch(url);
@@ -77,10 +57,17 @@ async function loadNewsFromGAS(url, listId, count = null) {
 
 // TOPページ
 if (document.getElementById("top-news-list")) {
-  loadNewsFromGAS("https://script.google.com/a/macros/gse.okayama-c.ed.jp/s/AKfycbyHVE-WjXWF5XJzfO5M5RCwV8Bu_fU3EncITrzgaf6n0RlyiHEysmoVH-2HtJSTEcUe/exec", "top-news-list", 5);
+  loadNewsFromGAS(
+    "https://script.google.com/a/macros/gse.okayama-c.ed.jp/s/AKfycbyHVE-WjXWF5XJzfO5M5RCwV8Bu_fU3EncITrzgaf6n0RlyiHEysmoVH-2HtJSTEcUe/exec",
+    "top-news-list",
+    5
+  );
 }
 
 // NEWS.html
 if (document.getElementById("all-news-list")) {
-  loadNewsFromGAS("https://script.google.com/a/macros/gse.okayama-c.ed.jp/s/AKfycbyHVE-WjXWF5XJzfO5M5RCwV8Bu_fU3EncITrzgaf6n0RlyiHEysmoVH-2HtJSTEcUe/exec", "all-news-list");
+  loadNewsFromGAS(
+    "https://script.google.com/a/macros/gse.okayama-c.ed.jp/s/AKfycbyHVE-WjXWF5XJzfO5M5RCwV8Bu_fU3EncITrzgaf6n0RlyiHEysmoVH-2HtJSTEcUe/exec",
+    "all-news-list"
+  );
 }
