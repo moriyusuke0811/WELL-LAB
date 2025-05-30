@@ -278,18 +278,19 @@ p .titlepages{
   font-size: 14px;
 }
 
-/* 🌊 波アニメーション */
+/* 波をフッターの最下部に */
 .wave-container {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 100px;
   overflow: hidden;
-  bottom: 0;
+  line-height: 0;
+  z-index: 1;
 }
 
 .wave {
-  position: absolute;
-  bottom: 0;
+  display: block;
   width: 100%;
   height: 100%;
   animation: waveMove 8s ease-in-out infinite alternate;
