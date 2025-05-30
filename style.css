@@ -238,3 +238,60 @@ p .titlepages{
 .more-news:hover {
   text-decoration: underline;
 }
+
+.site-footer {
+  position: relative;
+  background: #2c7dce;
+  color: white;
+  padding: 60px 20px 40px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.circle-bg {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #5aa0f0, #2364a5);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.creator {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.sns-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.sns-links a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.sns-links a:hover img {
+  transform: scale(1.1);
+}
