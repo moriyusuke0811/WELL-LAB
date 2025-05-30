@@ -280,7 +280,7 @@ p .titlepages{
 .wave-wrapper {
   width: 100%;
   height: 100px;
-  background: linear-gradient(135deg, #2364a5, #2c7dce); /* 波の下に濃い背景 */
+  background: linear-gradient(135deg, #2c7dce, #5aa0f0, #2364a5); /* 波の下に濃い背景 */
   overflow: hidden;
   line-height: 0;
   position: relative;
