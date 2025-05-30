@@ -243,14 +243,16 @@ p .titlepages{
   background: linear-gradient(135deg, #2c7dce, #5aa0f0, #2364a5);
   color: white;
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 60px 20px 0;
   position: relative;
-  z-index: 1;
+  overflow: hidden;
 }
 
 .footer-content {
   max-width: 960px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
@@ -276,20 +278,28 @@ p .titlepages{
   font-size: 14px;
 }
 
-/* 👇 波の背景（より濃いグラデーション） */
-.wave-wrapper {
+/* 🌊 波アニメーション */
+.wave-container {
+  position: relative;
   width: 100%;
   height: 100px;
-  background: linear-gradient(135deg, #2c7dce, #5aa0f0, #2364a5); /* 波の下に濃い背景 */
   overflow: hidden;
-  line-height: 0;
-  position: relative;
-  z-index: 0;
+  bottom: 0;
 }
 
-.wave-wrapper svg {
-  display: block;
+.wave {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  color: #95d8ec;
+  animation: waveMove 8s ease-in-out infinite alternate;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0) scaleY(1);
+  }
+  100% {
+    transform: translateX(-50px) scaleY(1.05);
+  }
 }
