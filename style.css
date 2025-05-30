@@ -276,16 +276,18 @@ p .titlepages{
   font-size: 14px;
 }
 
-.wave {
+/* 👇 波の背景（より濃いグラデーション） */
+.wave-wrapper {
   width: 100%;
   height: 100px;
+  background: linear-gradient(135deg, #2364a5, #2c7dce); /* 波の下に濃い背景 */
   overflow: hidden;
   line-height: 0;
   position: relative;
   z-index: 0;
 }
 
-.wave svg {
+.wave-wrapper svg {
   display: block;
   width: 100%;
   height: 100%;
