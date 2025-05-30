@@ -292,8 +292,10 @@ p .titlepages{
 .wave {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  left: 0;         /* ← これを追加して左詰め */
+  width: 100vw;    /* ← 画面幅いっぱいに変更 */
   height: 120px;
+  pointer-events: none;
 }
 
 .wave-back {
