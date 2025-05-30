@@ -278,7 +278,7 @@ p .titlepages{
   font-size: 14px;
 }
 
-/* 🌊 波 */
+/*  波 */
 .wave-container {
   position: absolute;
   bottom: 0;
@@ -293,8 +293,8 @@ p .titlepages{
   position: absolute;
   bottom: 0;
   left: 0;         /* ← これを追加して左詰め */
-  width: 120vw;    /* ← 画面幅いっぱいに変更 */
-  height: 120px;
+  width: 150vw;    /* ← 画面幅いっぱいに変更 */
+  height: 140px;
   pointer-events: none;
 }
 
