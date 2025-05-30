@@ -207,3 +207,34 @@ body {
 p .titlepages{
   text-align: center;
 }
+
+.news-section {
+  padding: 2rem;
+  background-color: #f4f8fc;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+}
+
+.news-list li {
+  margin-bottom: 8px;
+}
+
+.news-list .date {
+  color: #2364a5;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.more-news {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  color: #2c7dce;
+  text-decoration: none;
+}
+.more-news:hover {
+  text-decoration: underline;
+}

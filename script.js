@@ -35,3 +35,24 @@ function resetInterval() {
   clearInterval(slideInterval);
   slideInterval = setInterval(nextSlide, intervalTime);
 }
+
+function renderNews(listId, count = null) {
+  const container = document.getElementById(listId);
+  const displayItems = count ? newsItems.slice(0, count) : newsItems;
+
+  displayItems.forEach(item => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span class="date">${item.date}</span> <a href="${item.url}">${item.title}</a>`;
+    container.appendChild(li);
+  });
+}
+
+// TOPページ用
+if (document.getElementById("top-news-list")) {
+  renderNews("top-news-list", 5);
+}
+
+// NEWS.html用
+if (document.getElementById("all-news-list")) {
+  renderNews("all-news-list");
+}
