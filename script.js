@@ -58,7 +58,7 @@ async function loadNewsFromGAS(url, listId, count = null) {
 // TOPページ
 if (document.getElementById("top-news-list")) {
   loadNewsFromGAS(
-    "https://script.google.com/macros/s/AKfycbzNUI_A_aYZr-vvqbA5EYiyslR00KPUTfCTw2Qenq30AAPealqPIiRuq1vKVk8g5wxW/exec",
+    "https://script.google.com/macros/s/AKfycbznnfYbIkm3ylEGQLnRpjZDTA5hZ7AZ2WRDazlo3qLItH03TG_9hoGoFGGJQAUxzzgp/exec",
     "top-news-list",
   );
 }
@@ -66,7 +66,7 @@ if (document.getElementById("top-news-list")) {
 // NEWS.html
 if (document.getElementById("all-news-list")) {
   loadNewsFromGAS(
-    "https://script.google.com/macros/s/AKfycbzNUI_A_aYZr-vvqbA5EYiyslR00KPUTfCTw2Qenq30AAPealqPIiRuq1vKVk8g5wxW/exec",
+    "https://script.google.com/macros/s/AKfycbznnfYbIkm3ylEGQLnRpjZDTA5hZ7AZ2WRDazlo3qLItH03TG_9hoGoFGGJQAUxzzgp/exec",
     "all-news-list"
   );
 }
