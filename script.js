@@ -21,15 +21,17 @@ function prevSlide() {
   updateSlidePosition();
 }
 
-nextBtn.addEventListener('click', () => {
-  nextSlide();
-  resetInterval();
-});
+if (prevBtn && nextBtn) {
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetInterval();
+  });
 
-prevBtn.addEventListener('click', () => {
-  prevSlide();
-  resetInterval();
-});
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetInterval();
+  });
+}
 
 function resetInterval() {
   clearInterval(slideInterval);
