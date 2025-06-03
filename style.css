@@ -281,27 +281,23 @@ p .titlepages{
   font-size: 14px;
 }
 
-/*  波 */
-/* 波全体のコンテナ */
 .wave-container {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: 120px;
+  height: 180px;
   overflow: hidden;
   line-height: 0;
   z-index: 1;
 }
 
-/* 波レイヤー（共通） */
 .wave {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
-  width: 400%;  /* 横に伸ばしてアニメーションの余地を作る */
+  width: 200%;  /* 2倍幅でループできるように */
   height: 250px;
   line-height: 0;
   overflow: hidden;
@@ -313,31 +309,31 @@ p .titlepages{
   display: block;
 }
 
-/* 背面の青波（やや透明） */
+/* 背面の青波 */
 .wave-back {
-  animation: waveBackMove 12s ease-in-out infinite alternate;
+  animation: waveBackMove 18s linear infinite;
   z-index: 1;
 }
 .wave-back path {
-  fill: rgba(29, 95, 171, 0.4); /* 半透明の青波 */
+  fill: rgba(29, 95, 171, 0.4);
 }
 
-/* 手前の白波（より透明度高め） */
+/* 手前の白波 */
 .wave-front {
-  animation: waveFrontMove 8s ease-in-out infinite alternate;
+  animation: waveFrontMove 12s linear infinite;
   z-index: 2;
 }
 .wave-front path {
-  fill: rgba(255, 255, 255, 0.6); /* 半透明の白波 */
+  fill: rgba(255, 255, 255, 0.6);
 }
 
-/* 波のアニメーション（ゆったり動く） */
+/* アニメーション定義 */
 @keyframes waveBackMove {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100px); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes waveFrontMove {
   0% { transform: translateX(0); }
-  100% { transform: translateX(100px); }
+  100% { transform: translateX(-50%); }
 }
