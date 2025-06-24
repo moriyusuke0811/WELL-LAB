@@ -8,6 +8,7 @@ body, html {
   margin: 0;
   padding: 0;
 }
+
 /* === ヘッダー === */
 .header01 {
   padding: 20px 24px;
@@ -149,6 +150,7 @@ body, html {
   align-items: center;
   position: relative;
   z-index: 1;
+  scroll-margin-top: 100px;
 }
 
 .circle-text h2 {
@@ -211,6 +213,7 @@ p .titlepages{
   text-align: center;
 }
 
+/* === NEWS === */
 .news-section {
   padding: 2rem;
   background-color: #f4f8fc;
@@ -242,6 +245,7 @@ p .titlepages{
   text-decoration: underline;
 }
 
+/* === フッター === */
 .site-footer {
   background: linear-gradient(135deg, #2c7dce, #5aa0f0, #2364a5);
   color: white;
