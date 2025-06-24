@@ -72,3 +72,14 @@ if (document.getElementById("all-news-list")) {
     "all-news-list"
   );
 }
+
+// 円をクリックしたときに該当セクションへスムーズに移動
+document.querySelectorAll('.circle-text a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
