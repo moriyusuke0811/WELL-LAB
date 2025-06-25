@@ -342,3 +342,90 @@ p .titlepages{
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+/* === 活動紹介（円＋横テキスト） === */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  background-color: #f4f8fc;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-circle {
+  flex: 0 0 200px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 240px;
+}
+
+.profile-text h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #2364a5;
+}
+
+.profile-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === メンバー紹介（カード形式で統一感） === */
+.members-section {
+  background-color: #eaf4fc;
+  padding: 60px 20px;
+}
+
+.members-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2364a5;
+}
+
+.member-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.member-card {
+  width: 200px;
+  text-align: center;
+}
+
+.member-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-bottom: 10px;
+}
+
+.member-card h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: #2c7dce;
+}
+
+.member-card p {
+  font-size: 14px;
+  color: #444;
+}
